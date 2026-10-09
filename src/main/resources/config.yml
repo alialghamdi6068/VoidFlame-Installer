@@ -1,0 +1,13 @@
+repository:
+  owner: alialghamdi6068
+  name: VoidFlame-Installer
+  branch: main
+  manifest: manifest.yml
+updates:
+  max-file-size-mib: 512
+  backups-enabled: true
+  backup-retention: 10
+  allow-unverified-files: true
+  allow-world-archives: true
+messages:
+  prefix: '&8[&5VoidFlame Installer&8] &r'
