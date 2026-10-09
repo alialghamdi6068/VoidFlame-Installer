@@ -1,0 +1,16 @@
+name: VoidFlame-Installer
+version: '${version}'
+main: net.voidflame.installer.VoidFlameInstaller
+api-version: '1.21'
+author: VoidFlame
+website: https://github.com/alialghamdi6068/VoidFlame-Installer
+description: Safely synchronize server files from a public GitHub repository.
+commands:
+  vfi:
+    description: VoidFlame Installer commands
+    usage: /vfi <check|update|status|rollback>
+    permission: voidflameinstaller.admin
+permissions:
+  voidflameinstaller.admin:
+    description: Allows managing installer updates
+    default: op
