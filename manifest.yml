@@ -1,0 +1,15 @@
+# Add each payload file to this list. sha256 is the SHA-256 of the exact uploaded file.
+# Empty hashes are allowed by default but are not integrity-verified; fill them for production.
+files:
+  # - source: server-files/plugins/ExamplePlugin.jar
+  #   target: plugins/ExamplePlugin.jar
+  #   type: file
+  #   sha256: "REPLACE_WITH_SHA256"
+  # - source: server-files/configs/ExamplePlugin/config.yml
+  #   target: plugins/ExamplePlugin/config.yml
+  #   type: file
+  #   sha256: "REPLACE_WITH_SHA256"
+  # - source: server-files/worlds/duel-arena.zip
+  #   target: duel-arena
+  #   type: world-zip
+  #   sha256: "REPLACE_WITH_SHA256"
