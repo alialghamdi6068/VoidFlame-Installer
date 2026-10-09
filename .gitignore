@@ -1,0 +1,16 @@
+# Gradle
+.gradle/
+build/
+
+# Local server data and secrets
+*.db
+*.sqlite
+*.sqlite3
+*.log
+backups/
+server.properties
+eula.txt
+ops.json
+whitelist.json
+banned-players.json
+banned-ips.json
