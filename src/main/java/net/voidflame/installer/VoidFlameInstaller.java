@@ -59,6 +59,9 @@ public final class VoidFlameInstaller extends JavaPlugin {
         CompletableFuture.runAsync(() -> {
             try {
                 List<Entry> entries = loadManifest();
+                if (entries.isEmpty()) {
+                    throw new IllegalStateException("manifest.yml contains no files. Add built SMP plugin JARs/configs and SHA-256 hashes before running /vfi check or /vfi update.");
+                }
                 List<String> report = new ArrayList<>();
                 int changed = 0;
                 for (Entry entry : entries) {
