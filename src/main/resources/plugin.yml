@@ -1,7 +1,7 @@
 name: VoidFlame-Installer
 version: '${version}'
 main: net.voidflame.installer.VoidFlameInstaller
-api-version: '1.21'
+api-version: '26.2'
 author: VoidFlame
 website: https://github.com/alialghamdi6068/VoidFlame-Installer
 description: Safely synchronize server files from a public GitHub repository.
