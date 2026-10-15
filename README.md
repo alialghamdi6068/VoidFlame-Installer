@@ -1,6 +1,6 @@
 # VoidFlame-Installer
 
-A Paper plugin that synchronizes server files from this public GitHub repository. It is designed for a simple workflow: add plugin JARs/configs/world archives under `server-files/`, describe them in `manifest.yml`, run `/vfi check`, then `/vfi update`, and restart Paper.
+A Paper 26.2 / Java 25 plugin that synchronizes server files from this public GitHub repository. It is designed for a simple workflow: add plugin JARs/configs/world archives under `server-files/`, describe them in `manifest.yml`, run `/vfi check`, then `/vfi update`, and restart Paper.
 
 ## Requirements
 - Paper (recommended: a recent supported Paper release)
@@ -8,7 +8,19 @@ A Paper plugin that synchronizes server files from this public GitHub repository
 - Outbound HTTPS access to GitHub
 - This repository must be public when using the no-token setup
 
-## Install
+### Active deployment target: VoidFlameMC SMP
+
+The current project direction is **SMP survival**, not Practice/Duels. The active plugin stack is:
+
+- Required: `VoidFlame-Core`, `VoidFlame-Economy`, `VoidFlame-Shop`, `VoidFlame-Sell`, `VoidFlame-AH`, `VoidFlame-Order`, `VoidFlame-Social`, `VoidFlame-Security`, `VoidFlame-Logs`, `VoidFlame-TAB`, `VoidFlame-UI`.
+- Permission management: `LuckPerms`; do not install the legacy custom Ranks plugin as a second rank authority.
+- Optional staff console: `VoidFlame-Admin`. Do not install both `VoidFlame-Admin` and `VoidFlame-staff-gui` together because they register overlapping staff commands.
+- Do not install the legacy Practice/Duels feature plugins (`VoidFlame-Duels`, `VoidFlame-Arenas`, `VoidFlame-Kits`, `VoidFlame-Stats`, `VoidFlame-Ranks`) in the current SMP deployment.
+- Keep Minecraft authentication in normal online mode. VoidFlame does not provide `/login` or `/register` accounts.
+
+**Deployment status:** `manifest.yml` is currently empty, and `server-files/plugins/` contains no built plugin JARs. Therefore `/vfi update` currently has no SMP payload to install. Add the actual built JARs and their SHA-256 hashes to the manifest before treating this installer as production-ready. This repository intentionally does not guess or download private-repository artifacts without an authorized distribution path.
+
+# Install
 1. Download/build the plugin JAR from GitHub Actions (once the first build finishes), or build locally with `gradle build`.
 2. Put `VoidFlame-Installer.jar` into the server's `plugins/` directory.
 3. Start Paper once, then stop it.
